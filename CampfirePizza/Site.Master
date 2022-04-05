@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CampfirePizza.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+      <header class="mt-0 pt-0">
+        <div class="bg-cover clearfix pt-3">
+            <a href="default.aspx">
+                <img src="assets/images/logo2.png" width="100" />
+                <h2 class="logo">Campfire Pizza</h2>
+            </a>
+            <nav class="nav nav-fill mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://facebook.com" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                </li>
+            </nav>
+
+            <div class="ml-0 mr-0 pb-1">
+                <nav class="navbar navbar-expand-md">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="default.aspx">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="PlaceOrder.aspx">Place Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Menu.aspx">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="About.aspx">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Orders.aspx">See All Orders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Customers.aspx">See All Customers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Locations.aspx">See All Locations</a>
+                            </li>
+                        </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        </header>
+
+        <footer class="container-fluid pt-5">
+        <div class="container">
+            <h2 class="logo text-center">Campfire Pizza</h2>
+            <nav class="nav nav-fill mx-auto mt-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://facebook.com" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://facebook.com" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                </li>
+            </nav>
+        </div>
+        <div class="copyright mt-4">
+            <p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text text-center">
+                The Campfire Pizza website uses many licenced things, please see <a class="text-white" href="About.aspx">Licencing</a>
+            </p>
+        </div>
+    </footer>
+    </form>
+</body>
+</html>
